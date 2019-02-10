@@ -20,3 +20,8 @@ cd root/src
 cd ../..
 # You might need to use gmake instead of make here on FreeBSD
 make clean && make DEBUG=qemu img && sync
+# Now that the image is created, convert it to qcow2 to save space
+qemu-img convert -f raw -o qcow2 qword.img qword.qcow2
+# Clean up a bit
+rm qword.img
+# Fuck you mint
