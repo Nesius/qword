@@ -1,7 +1,4 @@
 #!/bin/bash
-# Clone repo wherever you like
-git clone https://github.com/qword-os/qword.git
-cd qword
 # Build and install echfs-utils (used to build the root fs image)
 cd host/echfs-utils
 make
